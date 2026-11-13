@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a18">
+  <meta name="description" content="Aventura de plataformas pixel art en un sistema digital en ruinas.">
+  <title>Código Perdido: Escape del Sistema</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="title-screen" class="title-screen" aria-label="Pantalla de inicio de Código Perdido">
+    <div class="title-world" aria-hidden="true">
+      <div class="title-stars"></div>
+      <div class="title-scanlines"></div>
+      <div class="title-horizon"></div>
+      <div class="title-city title-city-back"></div>
+      <div class="title-city title-city-front"></div>
+      <div class="title-ground"></div>
+      <div class="portal">
+        <div class="portal-halo"></div>
+        <div class="portal-ring portal-ring-outer"></div>
+        <div class="portal-ring portal-ring-inner"></div>
+        <div class="portal-core"></div>
+        <div class="portal-sparks"></div>
+      </div>
+      <div class="title-pixels title-pixels-left"></div>
+      <div class="title-pixels title-pixels-right"></div>
+      <div class="byte-silhouette">
+        <span class="byte-pack"></span>
+        <span class="byte-head"></span>
+        <span class="byte-body"></span>
+        <span class="byte-arm byte-arm-left"></span>
+        <span class="byte-arm byte-arm-right"></span>
+        <span class="byte-leg byte-leg-left"></span>
+        <span class="byte-leg byte-leg-right"></span>
+      </div>
+    </div>
+    <div class="title-vignette" aria-hidden="true"></div>
+    <header class="title-header">
+      <a class="wordmark" href="#" aria-label="Código Perdido, inicio"><span class="mark">C</span><span>CÓDIGO <b>PERDIDO</b></span></a>
+      <span class="title-status"><span class="live-dot"></span> SEÑAL DETECTADA <span class="build">BUILD 0.9.5</span></span>
+    </header>
+    <div class="title-layout">
+      <div class="title-copy">
+        <div class="eyebrow"><span class="title-index">ARCHIVO 07</span> · UNA AVENTURA PIXEL ART</div>
+        <h1 class="title-heading" data-text="CÓDIGO PERDIDO" aria-label="CÓDIGO PERDIDO">CÓDIGO<br><em>PERDIDO</em></h1>
+        <p class="title-tagline">¿Podrás descubrir la verdad?</p>
+        <p class="title-description">Un sistema olvidado. Recuerdos fragmentados. El origen de BYTE espera al otro lado.</p>
+        <nav class="title-menu" aria-label="Menú principal">
+          <button class="title-button title-button-primary" data-title-action="play"><span class="title-button-icon">▶</span><span><b>JUGAR</b><small id="play-detail">Iniciar una nueva partida</small></span><span class="title-button-key">ENTER</span></button>
+          <button class="title-button" data-title-action="options"><span class="title-button-icon">◈</span><span><b>OPCIONES</b><small>Audio y controles</small></span><span class="title-button-key">02</span></button>
+          <button class="title-button" data-title-action="credits"><span class="title-button-icon">▤</span><span><b>CRÉDITOS</b><small>El equipo detrás del archivo</small></span><span class="title-button-key">03</span></button>
+          <button class="title-button" data-title-action="exit"><span class="title-button-icon">×</span><span><b>SALIR</b><small>Guardar y abandonar</small></span><span class="title-button-key">04</span></button>
+        </nav>
+        <button class="title-archive-link" data-title-action="archive">ARCHIVO DE PARTIDA <span>↗</span></button>
+      </div>
+      <div class="portal-caption" aria-hidden="true"><span>PUERTA DE ENLACE</span><b>UBICACIÓN DESCONOCIDA</b><i></i></div>
+    </div>
+    <footer class="title-footer"><span>UN ARCHIVO PERDIDO. CINCO MUNDOS. UNA VERDAD.</span><span>BYTE_07 <i>◆</i> PIXEL_00</span></footer>
+    <div id="title-panel" class="title-panel" aria-live="polite" hidden></div>
+  </section>
+  <main class="shell">
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="Código Perdido, inicio"><span class="mark">C</span><span>CÓDIGO <b>PERDIDO</b></span></a>
+      <div class="top-meta"><span class="live-dot"></span> SISTEMA INESTABLE <span class="build">BUILD 0.9.5</span></div>
+    </header>
+    <section class="game-frame" aria-label="Videojuego Código Perdido">
+      <canvas id="game" width="960" height="540" aria-label="Juego de plataformas. Usa WASD o las flechas para moverte."></canvas>
+      <div id="screen" class="screen" aria-live="polite"></div>
+      <div id="toast" class="toast" role="status"></div>
+      <div class="touch-controls" aria-label="Controles táctiles">
+        <div class="touch-cluster">
+          <button data-key="ArrowLeft" aria-label="Mover a la izquierda">◀</button>
+          <button data-key="ArrowRight" aria-label="Mover a la derecha">▶</button>
+        </div>
+        <div class="touch-cluster">
+          <button data-action="jump" aria-label="Saltar">SALTO</button>
+          <button data-action="interact" aria-label="Interactuar">USAR</button>
+          <button data-action="dash" aria-label="Usar dash">DASH</button>
+          <button data-action="reality" aria-label="Cambiar realidad">REAL</button>
+          <button data-action="pixel" aria-label="Usar habilidad de PIXEL">PIXEL</button>
+          <button data-action="freeze" aria-label="Congelar enemigos">FREEZE</button>
+          <button data-action="shield" aria-label="Activar escudo">ESCUDO</button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer"><span>UN ARCHIVO PERDIDO. CINCO MUNDOS. UNA VERDAD.</span><span>HECHO PARA EXPLORAR <i>◆</i></span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
